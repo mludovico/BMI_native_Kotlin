@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultadoText"
+        android:textSize="24sp"
+        android:lines="4"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_guide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/imc_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_guide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/verticalGuide"
+        android:text="@string/bmi_table_header"
+        style="@style/table_item" />
+    <TextView
+        android:id="@+id/imc_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imc_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/verticalGuide"
+        app:layout_constraintBottom_toBottomOf="@+id/class_1"
+        android:text="@string/bmi_table_1"
+        android:background="@color/skinny"
+        style="@style/table_item" />
+
+    <TextView
+        android:id="@+id/imc_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imc_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/verticalGuide"
+        app:layout_constraintBottom_toBottomOf="@+id/class_2"
+        android:text="@string/bmi_table_2"
+        android:background="@color/healthy"
+        style="@style/table_item"/>
+
+    <TextView
+        android:id="@+id/imc_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imc_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/verticalGuide"
+        app:layout_constraintBottom_toBottomOf="@+id/class_3"
+        android:text="@string/bmi_table_3"
+        android:background="@color/overweighted"
+        style="@style/table_item"/>
+
+    <TextView
+        android:id="@+id/imc_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imc_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/verticalGuide"
+        app:layout_constraintBottom_toBottomOf="@+id/class_4"
+        android:text="@string/bmi_table_4"
+        android:background="@color/obesity"
+        style="@style/table_item"/>
+
+    <TextView
+        android:id="@+id/imc_5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imc_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/verticalGuide"
+        app:layout_constraintBottom_toBottomOf="@+id/class_5"
+        android:text="@string/bmi_table_5"
+        android:background="@color/severe_obesity"
+        style="@style/table_item"/>
+
+    <TextView
+        android:id="@+id/imc_6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imc_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/verticalGuide"
+        app:layout_constraintBottom_toBottomOf="@+id/class_6"
+        android:text="@string/bmi_table_6"
+        android:background="@color/morbid_obesity"
+        style="@style/table_item"/>
+
+    <TextView
+        android:id="@+id/class_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_guide"
+        app:layout_constraintStart_toEndOf="@id/verticalGuide"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/bmi_table_header_class"
+        style="@style/table_item"/>
+
+    <TextView
+        android:id="@+id/class_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/class_header"
+        app:layout_constraintStart_toEndOf="@id/verticalGuide"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/bmi_table_1_class"
+        android:background="@color/skinny"
+        style="@style/table_item"/>
+
+    <TextView
+        android:id="@+id/class_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/class_1"
+        app:layout_constraintStart_toEndOf="@id/verticalGuide"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/bmi_table_2_class"
+        android:background="@color/healthy"
+        style="@style/table_item"/>
+
+    <TextView
+        android:id="@+id/class_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/class_2"
+        app:layout_constraintStart_toEndOf="@id/verticalGuide"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/bmi_table_3_class"
+        android:background="@color/overweighted"
+        style="@style/table_item"/>
+
+    <TextView
+        android:id="@+id/class_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/class_3"
+        app:layout_constraintStart_toEndOf="@id/verticalGuide"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/bmi_table_4_class"
+        android:background="@color/obesity"
+        style="@style/table_item"/>
+
+    <TextView
+        android:id="@+id/class_5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/class_4"
+        app:layout_constraintStart_toEndOf="@id/verticalGuide"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/bmi_table_5_class"
+        android:background="@color/severe_obesity"
+        style="@style/table_item"/>
+
+    <TextView
+        android:id="@+id/class_6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/class_5"
+        app:layout_constraintStart_toEndOf="@id/verticalGuide"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/bmi_table_6_class"
+        android:background="@color/morbid_obesity"
+        style="@style/table_item"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
